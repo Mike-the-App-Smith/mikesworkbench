@@ -1,0 +1,33 @@
+{
+  "name": "mikesworkbench",
+  "version": "1.0.0",
+  "description": "Godot UI with a  Node.js server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mike-the-App-Smith/mikesworkbench.git"
+  },
+  "keywords": [
+    "Godot",
+    "Godot",
+    "Game",
+    "Engine",
+    "Node",
+    "Node.js"
+  ],
+  "author": "Michael Provenzano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mike-the-App-Smith/mikesworkbench/issues"
+  },
+  "homepage": "https://github.com/Mike-the-App-Smith/mikesworkbench#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
