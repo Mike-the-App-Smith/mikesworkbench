@@ -1,0 +1,41 @@
+a {
+  font-weight: 500;
+}
+
+.outer {
+  background-color: hsl(60, 100%, 90%);
+  color: hsl(240, 100%, 10%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.outer a { 
+  color: hsl(270, 100%, 5%);
+}
+
+.outer p {
+  font-weight: 450;
+  text-align: left;
+  margin-top: 3vh;
+}
+
+.negative {
+  background-color: hsl(240, 100%, 10%);
+  color: hsl(60, 100%, 90%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+.inner {
+  background-color: hsl(60, 100%, 90%);
+  color: hsl(240, 100%, 10%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+  margin-top: 3vh;
+  font-weight: 450;
+  padding: .5vh 1vw;
+}
+
+.inner a { 
+  color: hsl(270, 100%, 5%);
+}

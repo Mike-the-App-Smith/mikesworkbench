@@ -1,0 +1,204 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Noto_Sans/NotoSans-BoldItalic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Noto_Sans/NotoSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://index.gd" type="Script" id=3]
+[ext_resource path="res://Noto_Sans/NotoSans-Italic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://pngNsvg/github-inverted-svgrepo-com.svg" type="Texture" id=5]
+[ext_resource path="res://Noto_Sans/NotoSans-Bold.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.2, 0, 0.2, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 1, 1, 0.6, 1 )
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 6 )
+
+[node name="index" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="OpenScene" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="OpenScene"]
+anchor_right = 1.0
+rect_min_size = Vector2( 1280, 120 )
+color = Color( 0.815686, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="OpenScene/ColorRect"]
+anchor_right = 1.0
+margin_bottom = 110.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Welcome to my work bench!"
+align = 1
+valign = 1
+
+[node name="ColorRect2" type="ColorRect" parent="OpenScene"]
+anchor_bottom = 1.0
+margin_top = 120.0
+margin_right = 440.0
+rect_min_size = Vector2( 440, 600 )
+color = Color( 0.0509804, 0.0352941, 0.517647, 1 )
+
+[node name="Label" type="Label" parent="OpenScene/ColorRect2"]
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = 420.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "One of the things I find interesting about the Godot Game Engine, is that it's an easy way to use WASM in the web browser while still being able to use JavaScript."
+autowrap = true
+
+[node name="ColorRect3" type="ColorRect" parent="OpenScene"]
+margin_left = 440.0
+margin_top = 120.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 840, 600 )
+color = Color( 0.2, 0, 0.2, 1 )
+
+[node name="Button" type="Button" parent="OpenScene/ColorRect3"]
+margin_left = 400.0
+margin_top = 20.0
+margin_right = 800.0
+margin_bottom = 91.0
+custom_colors/font_color = Color( 1, 1, 0.6, 1 )
+custom_colors/font_color_hover = Color( 1, 0.6, 0.6, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "My Current Projects:"
+
+[node name="Button2" type="Button" parent="OpenScene/ColorRect3"]
+visible = false
+margin_left = 400.0
+margin_top = 20.0
+margin_right = 800.0
+margin_bottom = 91.0
+custom_colors/font_color = Color( 1, 1, 0.6, 1 )
+custom_colors/font_color_hover = Color( 1, 0.6, 0.6, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Log In"
+
+[node name="LineEdit" type="LineEdit" parent="OpenScene/ColorRect3/Button2"]
+visible = false
+margin_right = 400.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 400, 80 )
+placeholder_text = "account name"
+
+[node name="LineEdit2" type="LineEdit" parent="OpenScene/ColorRect3/Button2"]
+visible = false
+margin_left = 400.0
+margin_top = 100.0
+margin_right = 800.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 400, 80 )
+secret = true
+placeholder_text = "password"
+
+[node name="Button3" type="Button" parent="OpenScene/ColorRect3"]
+visible = false
+margin_left = 400.0
+margin_top = 20.0
+margin_right = 800.0
+margin_bottom = 91.0
+custom_colors/font_color = Color( 1, 1, 0.6, 1 )
+custom_colors/font_color_hover = Color( 1, 0.6, 0.6, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "New Account"
+
+[node name="LineEdit2" type="LineEdit" parent="OpenScene/ColorRect3/Button3"]
+visible = false
+margin_right = 400.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 400, 80 )
+placeholder_text = "account name"
+
+[node name="LineEdit3" type="LineEdit" parent="OpenScene/ColorRect3/Button3"]
+visible = false
+margin_left = 400.0
+margin_top = 100.0
+margin_right = 800.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 400, 80 )
+secret = true
+placeholder_text = "password"
+
+[node name="LineEdit4" type="LineEdit" parent="OpenScene/ColorRect3/Button3"]
+visible = false
+margin_top = 100.0
+margin_right = 400.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 400, 80 )
+secret = true
+placeholder_text = "verify password"
+
+[node name="Label" type="Label" parent="OpenScene/ColorRect3"]
+margin_left = 80.0
+margin_top = 120.0
+margin_right = 365.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 600, 0 )
+custom_colors/font_color = Color( 1, 1, 0.6, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "The code for my projects here can be found at my Github page (link above) {
+    All href links in a Godot web app open in the
+    default web browser, which might not be set 
+	    to the browser you are currently using.
+}
+Click the projects button to go to my work space"
+autowrap = true
+
+[node name="TextureButton" type="TextureButton" parent="OpenScene/ColorRect3"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 60.0
+margin_bottom = 60.0
+rect_scale = Vector2( 5, 5 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+
+[node name="LinkButton" type="LinkButton" parent="OpenScene/ColorRect3"]
+margin_left = 120.0
+margin_top = 40.0
+margin_right = 198.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 6 )
+text = "My Git Repo"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
